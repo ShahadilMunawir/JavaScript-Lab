@@ -1,0 +1,32 @@
+<!-- Program 10 -->
+
+<html>
+    <head>
+        <title>Coutries</title>
+    </head>
+    <body>
+        <label for="countries">Select a country: </label>
+        <select id="countries" onchange="get_capital()">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Sweden">Sweden</option>
+            <option value="UK">UK</option>
+            <option value="Malaysia">Malaysia</option>
+        </select>
+        <input type="text" id="box">
+        <script>
+            function get_capital(){
+                country_capitals = {
+                    "India": "New Delhi",
+                    "USA": "Washington, DC",
+                    "Sweden": "Stockholm",
+                    "UK": "London",
+                    "Malaysia": "Kuala Lumpur"
+                }
+                
+                var countries = document.getElementById("countries");
+                document.getElementById("box").value = country_capitals[countries.options[countries.selectedIndex].value];
+            }
+        </script>
+    </body>
+</html>

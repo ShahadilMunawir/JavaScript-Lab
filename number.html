@@ -1,0 +1,32 @@
+<!-- Program 1 -->
+
+<html>
+    <head>
+        <title>Number</title>
+    </head>
+    <body>
+        <label for="number">Enter a number: </label>
+        <input type="text" id="number">
+        <button onclick="check_num()">Submit</button>
+        <script>
+            function check_num(){
+                var num = document.getElementById('number').value;
+                var sum = 0;
+
+                for(var i = 0;i < num;i++){
+                    if(n % i == 0){
+                        sum = sum + i;
+                    }
+                }
+
+                if(sum == num){
+                    alert("The number is perfect ");
+                }else if(sum > num){
+                    alert("The number is abundant");
+                }else{
+                    alert("The number is deficient");
+                }
+            }
+        </script>
+    </body>
+</html>
