@@ -6,8 +6,17 @@
         <title>Events</title>
     </head>
     <body>
-        <input type="text" onfocus="this.style.backgroundColor='#00b0ff'; this.style.color='#263238';" onblur="this.style.backgroundColor='Orange'; this.style.color='grey'">
+        <input type="text" id="textbox" onfocus=change_color(1) onblur=change_color(0)>
         <script>
+            function change_color(i){
+                if(i == 1){
+                    document.getElementById("textbox").style.backgroundColor='red';
+                    document.getElementById("textbox").style.color='violet';
+                }else{
+                    document.getElementById("textbox").style.color='grey';
+                    document.getElementById("textbox").style.backgroundColor='Orange'
+                }
+            }
         </script>
     </body>
 </html>
