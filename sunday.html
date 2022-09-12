@@ -1,0 +1,33 @@
+<!-- Program 11 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>January</title>
+    </head>
+    <body>
+        <label for="year">Year: </label>
+        <input type="text" id="year">
+        <label for="finalYear">Final Year: </label>
+        <input type="text" id="finalYear">
+        <br>
+        <button onclick="find_sunday()">Find</button>
+        <script>
+            function find_sunday(year, finalYear){
+                var year = document.getElementById("year").value;
+                var finalYear = document.getElementById("finalYear").value;
+                for(year; year <= finalYear; year++){
+                    var dateTime = new Date(year, 0, 1);
+                    if(dateTime.getDay() == 0){
+                        var flag = 1;
+                        document.write(`1st of january ${year} is Sunday <br>`);
+                    }
+                }
+
+                if(flag != 1){
+                    alert("No years start with Sunday within the given range")
+                }
+            }
+        </script>
+    </body>
+</html>

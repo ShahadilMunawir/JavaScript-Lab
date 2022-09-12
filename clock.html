@@ -1,0 +1,55 @@
+<!-- Program 5 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clock</title>
+    </head>
+    <body>
+        <div style="font-size: 100px;">
+                <span id="hours"></span>
+                <span id="minutes"></span>
+                <span id="seconds"></span>
+                <span id="meridiem"></span>
+        </div>
+        <script>
+            function updateTime(){
+                var dateTime = new Date();
+                var hours = dateTime.getHours();
+                var minutes = dateTime.getMinutes();
+                var seconds = dateTime.getSeconds();
+                var meridiem = "AM";
+
+                if(hours >= 12){
+                    meridiem = "PM"
+                }
+
+                if(hours == 0){
+                    hours = 12;
+                }
+
+                if(hours > 12){
+                    hours = hours - 12;
+                }
+
+                if(hours < 10 || (hours > 12 && hours < 22)){
+                    hours = "0" + hours;
+                }
+
+                if(minutes < 10){
+                    minutes = "0" + minutes;
+                }
+
+                if(seconds < 10){
+                    seconds = "0" + seconds;
+                }
+
+                document.getElementById("hours").innerHTML = hours + ":";
+                document.getElementById("minutes").innerText = minutes + ":";
+                document.getElementById("seconds").innerHTML = seconds + " ";
+                document.getElementById("meridiem").innerHTML = meridiem;
+        }
+        setInterval(updateTime, 10)
+        </script>
+    </body>
+</html>
