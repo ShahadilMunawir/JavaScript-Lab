@@ -1,0 +1,17 @@
+<!-- Program 4 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Colours</title>
+    </head>
+    <body>
+        <button onclick="change_color()">Change Color</button>
+        <script>
+            var colors = ["Red", "Green", "Blue"];
+            function change_color(){
+                document.body.style.backgroundColor = colors[parseInt(Math.random() * colors.length)];    
+            }
+        </script>
+    </body>
+</html>
