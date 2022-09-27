@@ -1,0 +1,28 @@
+<!-- Program 6 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Email Validator</title>
+    </head>
+    <body>
+        <input type="text" id="email">
+        <button onclick="validate()">Check</button>
+        <p id="msg"></p>
+
+        <script>
+            function validate(){
+                var email = document.getElementById("email").value;
+                var msg = document.getElementById("msg")
+                var regEx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.(a[a-z]+)(.[a-z]+)?$/;
+                var result = regEx.test(email);
+                
+                if(result == true){
+                    msg.innerHTML = "The email ID is valid"
+                }else{
+                    msg.innerHTML = "The email ID is invalid"
+                }
+            }
+        </script>
+    </body>
+</html>
