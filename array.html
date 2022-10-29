@@ -6,14 +6,12 @@
         <title>Sum of Elements</title>
     </head>
     <body>
-        <h1>Sum of elements of array</h1>
         <script>
             var elements = [];
             var limit = prompt("Enter your limit: ");
             var i = limit;
             while(i != 0){
                 var item = parseInt(prompt(`Enter element ${limit - i+1}`));
-                document.write(`Item ${limit - i+1}: ${item}<br>`);
                 elements.push(item);
                 i--;
             }
